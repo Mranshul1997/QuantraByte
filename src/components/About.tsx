@@ -85,7 +85,7 @@ const About = () => {
           </div>
 
           {/* Core Capabilities */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -103,7 +103,7 @@ const About = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Company Values */}
           <div className="mt-20 text-center">

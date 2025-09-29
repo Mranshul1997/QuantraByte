@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import teamMember1 from "@/assets/finalanshul.png";
 import teamMember2 from "@/assets/jotheraj.png";
-import teamMember3 from "@/assets/gupta.png";
+import teamMember3 from "@/assets/rahulgupta.png";
 import teamMember4 from "@/assets/shobhit.png";
 
 interface TeamMember {
