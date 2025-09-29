@@ -57,10 +57,9 @@ const About = () => {
                   Our Vision
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  To be the catalyst that transforms visionary concepts into
-                  tangible technological solutions. We believe in the power of
-                  innovation to reshape industries and create meaningful impact
-                  in the digital world.
+                  To empower businesses with cutting-edge technology and
+                  intelligent software solutions that drive growth, efficiency,
+                  and lasting impact in a rapidly evolving digital world.
                 </p>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 quantum-gradient rounded-lg flex items-center justify-center">

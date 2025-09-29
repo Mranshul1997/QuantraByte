@@ -60,7 +60,7 @@ const Footer = () => {
     },
     {
       icon: Mail,
-      href: "mailto:hello@QuantraByte.com",
+      href: "mailto:jotherajkori99@gmail.com",
       label: "Email",
     },
   ];
@@ -84,8 +84,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 quantum-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">QB</span>
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                {/* <span className="text-white font-bold text-sm">♣</span> */}
+                <img src="src/assets/QBlogo.png" alt="QB" />
               </div>
               <span className="text-xl font-bold">QuantraByte</span>
             </div>
@@ -152,24 +153,24 @@ const Footer = () => {
               <div>
                 <p className="text-background/70 mb-1">Email</p>
                 <a
-                  href="mailto:hello@QuantraByte.com"
+                  href="mailto:jotherajkori99@gmail.com"
                   className="text-white hover:text-primary transition-colors duration-300"
                 >
-                  hello@QuantraByte.com
+                  jotherajkori99@gmail.com
                 </a>
               </div>
               <div>
                 <p className="text-background/70 mb-1">Phone</p>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+91 7617294185, 8770022687"
                   className="text-white hover:text-primary transition-colors duration-300"
                 >
-                  +1 (555) 123-4567
+                  +91 7617294185
                 </a>
               </div>
               <div>
                 <p className="text-background/70 mb-1">Location</p>
-                <p className="text-white">San Francisco, CA</p>
+                <p className="text-white">Vijay Nagar Indore, MP</p>
               </div>
             </div>
           </div>
@@ -199,7 +200,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-background/70 text-sm mb-4 md:mb-0">
-            <p>&copy; 2024 QuantraByte. All rights reserved.</p>
+            <p>&copy; 2025 QuantraByte. All rights reserved.</p>
           </div>
           <div className="flex space-x-6 text-sm">
             <a

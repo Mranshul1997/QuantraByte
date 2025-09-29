@@ -2,8 +2,8 @@ import { useState } from "react";
 import { ExternalLink, Github, X } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
+import project2 from "@/assets/capitalshop.jpg";
+import project3 from "@/assets/mobileapp.png";
 
 interface Project {
   id: number;
@@ -24,10 +24,10 @@ const Portfolio = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "AI Analytics Dashboard",
+      title: "Smart Financial Dashboard (Cross-Platform)",
       category: "AI/ML",
       description:
-        "Advanced analytics platform with machine learning insights and predictive modeling capabilities.",
+        "A cloud-based financial analytics platform that ingests multi-source financial data and provides predictive insights for small businesses.",
       image: project1,
       technologies: ["React", "TypeScript", "Python", "TensorFlow", "AWS"],
       features: [
@@ -58,7 +58,7 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "FinTech Mobile App",
+      title: "Food Delivery App",
       category: "Mobile Apps",
       description:
         "Cross-platform financial application with biometric authentication and real-time transactions.",
@@ -79,60 +79,60 @@ const Portfolio = () => {
       github: "https://github.com/QuantraByte/fintech-app",
       demo: "https://demo.QuantraByte.com/fintech-app",
     },
-    {
-      id: 4,
-      title: "Cloud Infrastructure",
-      category: "Cloud Integration",
-      description:
-        "Scalable microservices architecture deployed on AWS with automated CI/CD pipeline.",
-      image: project1,
-      technologies: ["AWS", "Docker", "Kubernetes", "Terraform", "Jenkins"],
-      features: [
-        "Auto-scaling",
-        "Load balancing",
-        "Monitoring & logging",
-        "Zero-downtime deployment",
-      ],
-      github: "https://github.com/QuantraByte/cloud-infrastructure",
-    },
-    {
-      id: 5,
-      title: "Data Pipeline Platform",
-      category: "AI/ML",
-      description:
-        "Automated data processing pipeline with real-time analytics and machine learning integration.",
-      image: project2,
-      technologies: [
-        "Python",
-        "Apache Airflow",
-        "Apache Kafka",
-        "PostgreSQL",
-        "Redis",
-      ],
-      features: [
-        "Real-time processing",
-        "Data validation",
-        "Automated workflows",
-        "Monitoring dashboard",
-      ],
-      github: "https://github.com/QuantraByte/data-pipeline",
-    },
-    {
-      id: 6,
-      title: "Healthcare Portal",
-      category: "Web Development",
-      description:
-        "HIPAA-compliant patient management system with telemedicine capabilities.",
-      image: project3,
-      technologies: ["React", "Node.js", "PostgreSQL", "WebRTC", "AWS"],
-      features: [
-        "HIPAA compliance",
-        "Video consultations",
-        "Patient records",
-        "Appointment scheduling",
-      ],
-      demo: "https://demo.QuantraByte.com/healthcare",
-    },
+    // {
+    //   id: 4,
+    //   title: "Cloud Infrastructure",
+    //   category: "Cloud Integration",
+    //   description:
+    //     "Scalable microservices architecture deployed on AWS with automated CI/CD pipeline.",
+    //   image: project1,
+    //   technologies: ["AWS", "Docker", "Kubernetes", "Terraform", "Jenkins"],
+    //   features: [
+    //     "Auto-scaling",
+    //     "Load balancing",
+    //     "Monitoring & logging",
+    //     "Zero-downtime deployment",
+    //   ],
+    //   github: "https://github.com/QuantraByte/cloud-infrastructure",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Data Pipeline Platform",
+    //   category: "AI/ML",
+    //   description:
+    //     "Automated data processing pipeline with real-time analytics and machine learning integration.",
+    //   image: project2,
+    //   technologies: [
+    //     "Python",
+    //     "Apache Airflow",
+    //     "Apache Kafka",
+    //     "PostgreSQL",
+    //     "Redis",
+    //   ],
+    //   features: [
+    //     "Real-time processing",
+    //     "Data validation",
+    //     "Automated workflows",
+    //     "Monitoring dashboard",
+    //   ],
+    //   github: "https://github.com/QuantraByte/data-pipeline",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Healthcare Portal",
+    //   category: "Web Development",
+    //   description:
+    //     "HIPAA-compliant patient management system with telemedicine capabilities.",
+    //   image: project3,
+    //   technologies: ["React", "Node.js", "PostgreSQL", "WebRTC", "AWS"],
+    //   features: [
+    //     "HIPAA compliance",
+    //     "Video consultations",
+    //     "Patient records",
+    //     "Appointment scheduling",
+    //   ],
+    //   demo: "https://demo.QuantraByte.com/healthcare",
+    // },
   ];
 
   const categories = [

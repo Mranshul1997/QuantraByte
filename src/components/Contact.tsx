@@ -100,19 +100,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@QuantraByte.com",
-      action: "mailto:hello@QuantraByte.com",
+      content: "jotherajkori99@gmail.com",
+      action: "mailto:jotherajkori99@gmail.com",
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+1 (555) 123-4567",
+      content: "+91 7617294185",
       action: "tel:+15551234567",
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "San Francisco, CA 94102",
+      content: "Vijay Nagar, Indore, 452010",
       action: "https://maps.google.com/?q=San+Francisco,+CA+94102",
     },
   ];
@@ -297,10 +297,10 @@ const Contact = () => {
                         Our Location
                       </h3>
                       <p className="text-muted-foreground">
-                        San Francisco, California
+                        Vijay Nagar, Indore, MP,INDIA
                       </p>
                       <p className="text-sm text-muted-foreground mt-2">
-                        In the heart of Silicon Valley
+                        In the core of Silicon Valley
                       </p>
                     </div>
                   </div>

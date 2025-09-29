@@ -44,8 +44,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 quantum-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">QB</span>
+            <div className="w-8 h-8  rounded-lg flex items-center justify-center">
+              {/* <span className="text-white font-bold text-sm">QB</span> */}
+              <img src="src/assets/QBlogo.png"  alt="QB" />
             </div>
             <span className="text-xl lg:text-2xl font-bold text-gradient">
               QuantraByte

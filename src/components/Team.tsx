@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
-import teamMember3 from "@/assets/team-member-3.jpg";
+import teamMember1 from "@/assets/finalanshul.png";
+import teamMember2 from "@/assets/jotheraj.png";
+import teamMember3 from "@/assets/gupta.png";
+import teamMember4 from "@/assets/shobhit.png";
 
 interface TeamMember {
   id: number;
@@ -13,50 +14,50 @@ interface TeamMember {
 
 const teamGroups = [
   {
-    title: "Leadership",
+    // title: "Leadership",
     members: [
       {
         id: 1,
-        name: "Alex Rodriguez",
-        position: "Director",
-        bio: "Visionary leader with 10+ years in tech startups. Passionate about quantum computing and its practical applications.",
+        name: "Anshul Thakur",
+        position: "Tech Lead & Co-founder",
+        bio: "Visionary leader with years of experience in tech startups. Passionate about quantum computing and its practical applications.",
         image: teamMember1,
       },
     ],
   },
   {
-    title: "Developers",
+    // title: "Senior Tech Lead",
     members: [
       {
         id: 2,
-        name: "Priya Sharma",
-        position: "Lead Developer",
-        bio: "Full-stack engineer specializing in scalable web applications and cloud infrastructure.",
+        name: "Jotheraj Kori",
+        position: "Tech Lead",
+        bio: " AI/ML leader driving innovative solutions, transforming complex data into insights, and leading teams to deliver cutting-edge projects that accelerate business growth and technological advancement.",
         image: teamMember2,
       },
     ],
   },
   {
-    title: "Designers",
+    // title: "Quality Assuarance",
     members: [
       {
         id: 3,
-        name: "Jordan Lee",
-        position: "UI/UX Designer",
-        bio: "Creative mind behind our user experiences. Obsessed with clean design and usability.",
+        name: "Rahul Gupta",
+        position: "Senior QA lead",
+        bio: "QA expert ensuring software excellence through strategic testing, process improvements, and team leadership, delivering reliable, high-performing products in dynamic environments.",
         image: teamMember3,
       },
     ],
   },
   {
-    title: "Marketing",
+    // title: "Marketing/Management",
     members: [
       {
         id: 4,
-        name: "Samantha Green",
+        name: "Shobhit Gotiya",
         position: "Marketing Lead",
-        bio: "Drives our brand and outreach with data-driven strategies and creative campaigns.",
-        image: teamMember1, // Use a different image if available
+        bio: "Operational leader optimizing processes, managing teams, and driving efficiency to achieve measurable results and support sustainable business growth.",
+        image: teamMember4, // Use a different image if available
       },
     ],
   },
@@ -91,7 +92,7 @@ const Team = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-24 h-24 rounded-full mb-4 object-cover shadow-quantum"
+                        className="w-35 h-35 mb-4 object-cover shadow-quantum"
                       />
                       <h4 className="font-bold text-lg mb-1">{member.name}</h4>
                       <p className="text-gradient font-medium mb-2">
@@ -108,7 +109,7 @@ const Team = () => {
           </div>
 
           {/* Join Our Team CTA */}
-          <div className="text-center mt-20">
+          {/* <div className="text-center mt-20">
             <div
               className="bg-card rounded-2xl p-8 md:p-12 shadow-quantum fade-in-up"
               style={{ animationDelay: "1.2s" }}
@@ -128,7 +129,7 @@ const Team = () => {
                 View Open Positions
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

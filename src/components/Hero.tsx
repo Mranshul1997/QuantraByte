@@ -1,40 +1,44 @@
-import { ArrowRight, Play } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-bg.jpg';
+import { ArrowRight, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToAbout = () => {
-    const element = document.querySelector('#about');
+    const element = document.querySelector("#about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 hero-gradient opacity-90" />
+        <div className="absolute inset-0 hero-gradient opacity-60" />
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-quantum-blue rounded-full opacity-60 float-animation" />
+        {/* <div className="absolute top-20 left-10 w-2 h-2 bg-quantum-blue rounded-full opacity-60 float-animation" />
         <div className="absolute top-40 right-20 w-3 h-3 bg-byte-green rounded-full opacity-40 float-animation" style={{ animationDelay: '2s' }} />
         <div className="absolute bottom-40 left-20 w-2 h-2 bg-quantum-blue rounded-full opacity-50 float-animation" style={{ animationDelay: '4s' }} />
-        <div className="absolute bottom-20 right-10 w-4 h-4 bg-byte-green rounded-full opacity-30 float-animation" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-20 right-10 w-4 h-4 bg-byte-green rounded-full opacity-30 float-animation" style={{ animationDelay: '1s' }} /> */}
+       
       </div>
 
       {/* Content */}
@@ -42,20 +46,26 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up">
-            Quantum Ideas,{' '}
+            Quantum Ideas,{" "}
             <span className="text-gradient block mt-2">
               Byte-Sized Solutions
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Transform your business with cutting-edge AI, ML, Web & App solutions. 
-            Where innovation meets implementation.
+          <p
+            className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Transform your business with cutting-edge AI/ML, Web & App
+            solutions. Where innovation meets implementation.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
             <Button
               size="lg"
               onClick={scrollToContact}
@@ -64,7 +74,7 @@ const Hero = () => {
               Contact Us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            
+
             <Button
               size="lg"
               variant="outline"
@@ -77,12 +87,15 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 fade-in-up"
+            style={{ animationDelay: "0.6s" }}
+          >
             {[
-              { number: '100+', label: 'Projects Delivered' },
-              { number: '50+', label: 'Happy Clients' },
-              { number: '5+', label: 'Years Experience' },
-              { number: '24/7', label: 'Support' },
+              { number: "100+", label: "Projects Delivered" },
+              { number: "50+", label: "Happy Clients" },
+              { number: "8+", label: "Years Experience" },
+              { number: "24/7", label: "Support" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">
