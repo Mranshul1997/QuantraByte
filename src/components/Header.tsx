@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Qblogo from "../assets/QBlogo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8  rounded-lg flex items-center justify-center">
               {/* <span className="text-white font-bold text-sm">QB</span> */}
-              <img src="src/assets/QBlogo.png"  alt="QB" />
+              <img src={Qblogo}  alt="QB" />
             </div>
             <span className="text-xl lg:text-2xl font-bold text-gradient">
               QuantraByte
@@ -59,7 +60,7 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-foreground hover:text-primary transition-colors text-gray-400 font-medium"
               >
                 {item.label}
               </button>

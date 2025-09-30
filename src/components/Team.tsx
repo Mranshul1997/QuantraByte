@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import teamMember1 from "@/assets/finalanshul.png";
-import teamMember2 from "@/assets/jotheraj.png";
-import teamMember3 from "@/assets/rahulgupta.png";
-import teamMember4 from "@/assets/shobhit.png";
+import teamMember1 from "@/assets/AnshulD.png";
+import teamMember2 from "@/assets/davidD.png";
+import teamMember3 from "@/assets/RahulD.png";
+import teamMember4 from "@/assets/ShobhitD.png";
 
 interface TeamMember {
   id: number;
@@ -18,10 +18,10 @@ const teamGroups = [
     members: [
       {
         id: 1,
-        name: "Anshul Thakur",
-        position: "Tech Lead & Co-founder",
-        bio: "Visionary leader with years of experience in tech startups. Passionate about quantum computing and its practical applications.",
-        image: teamMember1,
+        name: "Jotheraj Kori",
+        position: "Senior Tech Lead ",
+        bio: " AI/ML leader driving innovative solutions, transforming complex data into insights, and leading teams to deliver cutting-edge projects that accelerate business growth and technological advancement.",
+        image: teamMember2,
       },
     ],
   },
@@ -30,10 +30,10 @@ const teamGroups = [
     members: [
       {
         id: 2,
-        name: "Jotheraj Kori",
+        name: "Anshul Thakur",
         position: "Tech Lead",
-        bio: " AI/ML leader driving innovative solutions, transforming complex data into insights, and leading teams to deliver cutting-edge projects that accelerate business growth and technological advancement.",
-        image: teamMember2,
+        bio: "Visionary leader with years of experience in full-stack development and AI-driven solutions. Passionate about leveraging emerging technologies to build scalable products and drive digital transformation.",
+        image: teamMember1,
       },
     ],
   },

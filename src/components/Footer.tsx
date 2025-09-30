@@ -1,5 +1,6 @@
 import { Linkedin, Github, Twitter, Mail, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
+import Qblogo from "../assets/QBlogo.png";
 
 const Footer = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -86,7 +87,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                 {/* <span className="text-white font-bold text-sm">♣</span> */}
-                <img src="src/assets/QBlogo.png" alt="QB" />
+                <img src={Qblogo} alt="QB" />
               </div>
               <span className="text-xl font-bold">QuantraByte</span>
             </div>
