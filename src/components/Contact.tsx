@@ -70,26 +70,50 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = () => {
-    // optional: show toast on click
-    toast({
-      title: "Sending...",
-      description: "Your message is being sent...",
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.success) {
+        toast({ title: "Sent!", description: "Your message has been sent." });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: data.error,
+          variant: "destructive",
+        });
+      }
+    } catch (err) {
+      toast({
+        title: "Error",
+        description: err.message,
+        variant: "destructive",
+      });
+    }
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email Us",
-      content: "jotherajkori99@gmail.com",
-      action: "mailto:jotherajkori99@gmail.com",
+      content: "singh.thakur2226@gmail.com",
+      action: "mailto:singh.thakur2226@gmail.com",
     },
     {
       icon: Phone,
       title: "Call Us",
       content: "+91 7617294185",
-      action: "tel:+15551234567",
+      action: "tel:+91 9039661302",
     },
     {
       icon: MapPin,
@@ -126,12 +150,7 @@ const Contact = () => {
                   <CardTitle className="text-2xl">Send us a message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form
-                    action="https://formsubmit.co/jotherajkori99@gmail.com"
-                    method="POST"
-                    onSubmit={handleSubmit}
-                    className="space-y-6"
-                  >
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label
