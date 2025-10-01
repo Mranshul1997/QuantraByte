@@ -6,7 +6,11 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors());
+const path = require("path");
 
+const _dirname = path.dirname("");
+const buildpath = path.join(_dirname, "../client/dist");
+app.use(express.static(buildpath));
 app.post("/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
