@@ -70,30 +70,12 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description:
-          "Thank you for contacting us. We'll get back to you within 24 hours.",
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      setIsSubmitting(false);
-    }, 2000);
+  const handleSubmit = () => {
+    // optional: show toast on click
+    toast({
+      title: "Sending...",
+      description: "Your message is being sent...",
+    });
   };
 
   const contactInfo = [
@@ -144,7 +126,12 @@ const Contact = () => {
                   <CardTitle className="text-2xl">Send us a message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    action="https://formsubmit.co/jotherajkori99@gmail.com"
+                    method="POST"
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label
