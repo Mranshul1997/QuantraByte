@@ -8,9 +8,17 @@ app.use(express.json());
 app.use(cors());
 const path = require("path");
 
-const _dirname = path.dirname("");
-const buildpath = path.join(_dirname, "../client/dist");
-app.use(express.static(buildpath));
+
+const buildPath = path.join(__dirname, "../client/dist"); // relative path to frontend build
+
+app.use(express.static(buildPath));
+
+// SPA fallback - React routing handle karne ke liye
+app.get('*', (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
+});
+
+
 app.post("/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 

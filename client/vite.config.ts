@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ['quantrabyte.com', 'localhost', '127.0.0.1'], // yahan apne domain add karo
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
