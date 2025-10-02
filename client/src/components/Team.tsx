@@ -55,7 +55,7 @@ const teamGroups = [
       {
         id: 4,
         name: "Shobhit Gotiya",
-        position: "Marketing Lead",
+        position: "Chief Operational Lead",
         bio: "Operational leader optimizing processes, managing teams, and driving efficiency to achieve measurable results and support sustainable business growth.",
         image: teamMember4, // Use a different image if available
       },
