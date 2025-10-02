@@ -1,33 +1,24 @@
-// server.js
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-const path = require("path");
 
-
-const buildPath = path.join(__dirname, "../client/dist"); // relative path to frontend build
-
+const buildPath = path.join(__dirname, "../client/dist");
 app.use(express.static(buildPath));
 
-// SPA fallback - React routing handle karne ke liye
-app.get('*', (req, res) => {
-  res.sendFile(path.join(buildPath, 'index.html'));
-});
-
-
+// API endpoint
 app.post("/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  // Gmail SMTP setup
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "singh.thakur2226@gmail.com", // Your Gmail
-      pass: "xdpx lxjf fyga bwki", // App Password (step 1)
+      user: "singh.thakur2226@gmail.com",
+      pass: "xdpx lxjf fyga bwki",
     },
   });
 
@@ -44,6 +35,11 @@ app.post("/contact", async (req, res) => {
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
+});
+
+// React Router fallback — sabse last me
+app.use((req, res) => {
+  res.sendFile(path.join(buildPath, "index.html"));
 });
 
 app.listen(5000, () => console.log("Server running on port 5000"));
