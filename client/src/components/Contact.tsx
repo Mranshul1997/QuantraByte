@@ -76,7 +76,7 @@ const Contact = () => {
 
     setIsSubmitting(true);
     try {
-      const res = await fetch("https://quantrabyte.com/contact", {
+      const res = await fetch("/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
